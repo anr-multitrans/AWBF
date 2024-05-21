@@ -12,7 +12,7 @@ class ModelSpecificAgent:
 
         for key, data in self.blackboard.read_all().items():
             # Skip already fused boxes
-            if key.startswith('fused_'):
+            if isinstance(key, str) and key.startswith('fused_'):
                 continue
             
             adjusted_box = [coord * adjustment_factor for coord in data['box']]

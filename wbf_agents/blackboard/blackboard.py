@@ -6,6 +6,9 @@ class Blackboard:
     def post(self, key, value):
         self.data[key] = value
 
+    def read(self, key):
+        return self.data.get(key, None)
+
     def read_all(self):
         return self.data
 
