@@ -328,7 +328,7 @@ if __name__ == '__main__':
             'verbose': False,
         }
 
-    in_dir = './'
+    in_dir = './predictions/'
     benchmark_csv = [
         in_dir + 'EffNetB0-preds.csv',
         in_dir + 'EffNetB0-mirror-preds.csv',
