@@ -15,12 +15,14 @@ In addition to a multi-agent system (MAS) that implement WBF in a decentralized 
 
 Python 3.*, Numpy, Numba
 
+## Examples 
+Pleas refer to main.py and AWBF_Examples folder (jupiter notebook for visualizing the bounding box evolution)
+
 
 
 ## Description of AWBF method and citation
 
 * https://ceur-ws.org/Vol-3813/13.pdf
-* https://authors.elsevier.com/c/1ca0dxnVK3cWY 
 
 If you find this code useful please cite:
 
