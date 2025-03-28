@@ -1,0 +1,23 @@
+import pandas as pd
+
+# Predictions from FakeModelA
+fake_model_a = pd.DataFrame({
+    "img_id": ["0001", "0001"],
+    "x1": [10, 100], "y1": [20, 120],
+    "x2": [50, 180], "y2": [60, 200],
+    "score": [0.9, 0.8], "label": ["cat", "dog"]
+})
+
+# Predictions from FakeModelB (slightly different)
+fake_model_b = pd.DataFrame({
+    "img_id": ["0001", "0001"],
+    "x1": [12, 102], "y1": [22, 122],
+    "x2": [48, 175], "y2": [58, 195],
+    "score": [0.85, 0.75], "label": ["cat", "dog"]
+})
+
+# Save CSV files
+fake_model_a.to_csv("FakeModelA.csv", index=False)
+fake_model_b.to_csv("FakeModelB.csv", index=False)
+
+print("✅ FakeModelA.csv and FakeModelB.csv generated successfully!")
