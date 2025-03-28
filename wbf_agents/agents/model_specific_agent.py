@@ -14,6 +14,9 @@ class ModelSpecificAgent:
             # Skip already fused boxes
             if isinstance(key, str) and key.startswith('fused_'):
                 continue
+            if not isinstance(data, dict) or 'box' not in data:
+                print(f"⚠️ Warning: Skipping key {key} because it lacks 'box' → {data}")
+                continue
             
             adjusted_box = [coord * adjustment_factor for coord in data['box']]
             adjusted_score = data['score'] * adjustment_factor
